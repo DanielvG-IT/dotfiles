@@ -1,0 +1,38 @@
+[user]
+    name = Daniël van Ginneken
+    email = dcjvanginneken@gmail.com
+
+[core]
+    editor = code --wait
+    autocrlf = input
+    excludesfile = ~/.gitignore_global
+
+[alias]
+    st = status
+    co = checkout
+    ci = commit
+    br = branch
+    df = diff
+    lg = log --oneline --graph --decorate --all
+
+[color]
+    ui = auto
+
+[push]
+    default = current
+
+[pull]
+    rebase = false
+
+[commit]
+    gpgSign = false  # Set to true if you use GPG signing
+
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
