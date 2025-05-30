@@ -1,0 +1,49 @@
+[user]
+	name = Daniel van Ginneken
+	email = dcjvanginneken@gmail.com
+	signingkey = 4F26EFC521697C12
+	signcommits = true
+[credential]
+	helper = manager-core
+[core]
+	editor = "code --wait"
+	autocrlf = true
+	safecrlf = false
+	eol = crlf
+[init]
+	defaultBranch = main
+[gpg]
+	program = gpg
+  tty = $(tty)
+[log]
+    abbrevCommit = true
+[commit]
+	gpgsign = true
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[push]
+	default = simple
+[pull]
+	rebase = true
+[http]
+	sslverify = true
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	lg = log --graph --oneline --decorate --all
+	last = log -1 HEAD
+	rb = rebase
+[status]
+	showUntrackedFiles = all
+[rerere]
+	enabled = true
+[fetch]
+	prune = true
