@@ -4,7 +4,7 @@
 	signingkey = 4F26EFC521697C12
 	signcommits = true
 [credential]
-	helper = manager-core
+	helper = manager
 [core]
 	editor = "code --wait"
 	autocrlf = true
